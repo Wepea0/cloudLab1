@@ -1,0 +1,130 @@
+head{
+    margin:auto;
+    font-family: Proxima, serif;
+    font-weight: bold;
+
+}
+@font-face { font-family: Proxima; 
+    src: url('Proxima Nova Font.woff2.otf'); 
+} 
+
+a:link {
+    color: white;
+  }
+a:visited{
+    color: white
+}
+
+body{
+    font-family: Proxima, serif;
+    padding: 1.5rem;
+    margin:auto;
+    border-style:inset;
+    color: #fafafa;
+    
+  }
+
+
+    
+  * {
+    box-sizing: border-box;
+  }
+  
+.column{
+    float:left;
+    width: 55%;
+    /* background-color:#aaa; */
+}
+.right{
+    float: right;
+    width:33%;
+    /* background-color:#bbb; */
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.button1 {
+    background-color:#11ab26;
+    border: none;
+    color: white;
+    padding: 0.7rem;
+    text-align: center;
+    text-decoration:underline;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.4rem;
+    border-radius:12%;
+    width: 15%;
+    font-family: Proxima, serif;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .button2 {
+    background-color: #656565;
+    border: none;
+    color: white;
+    padding: 0.7rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.4rem;
+    border-radius:12%;
+    width: 15%;
+    font-family: Proxima, serif;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.1rem;
+  }
+  .button1:hover{opacity:1}
+  .button2:hover{opacity:1}
+
+
+  .ul{
+    list-style-image: url('icons8-favorite-50.png');
+    list-style-type: square;
+}
+
+section{
+    margin:auto;
+    padding: 0.5rem;
+    border-style:solid;
+    border-top: whitesmoke solid;
+    border-bottom: whitesmoke solid;
+    border-right: none;
+    border-left:none;
+    border-width: 0.05rem;
+  }
+
+  .heading{
+    position: relative;
+  }
+
+  .heading:before{    
+    content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   border-bottom: 0.15rem solid #11ab26;
+   width: 35%;
+    
+  }
+  .grad {
+    background-image: linear-gradient(180deg, #737373, #1c1c1c);
+  }
+
+  footer{
+    color:#11ab26;
+  }
+  #Result{
+    color: #11ab26;
+  }
+  

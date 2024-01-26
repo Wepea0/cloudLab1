@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset = "UTF-8">
+<meta name = viewport content = "width = device-width, initial-scale = 1.0">
+<html lang = en>
+<link rel = stylesheet href = SpotifyStyle.css>
+<link rel = icon href = "6214523_logo_spotify_icon.png">
+
+    <head>
+        <title> Student CV</title>
+        <h1 id = "Username"> Wepea Adamwaba Buntugu </h1>
+        <p>
+        <button class = "button1"><a href = https://www.ashesi.edu.gh>Website </a></button>
+        <button class = "button1"><a href = https://www.linkedin.com/feed>LinkedIn</a></button>
+        <button class = "button2"> Email  </button>
+        <button class = "button2">  Call  </button>
+        </p>
+        
+    </head>
+
+    <body class = grad>
+        
+        <div class = "row">
+            <div class = "column">
+                <h2 class = "heading" >Experience <br></br></h2>
+                <section class = "block">
+                    <b id = "Recent_Experience"> Product Association @ UCI, </b> <i>VP of Design & Cofounder</i>
+                    <br><small class = "Addendum">JULY 2020 - Present . Irvine, CA</small></br>
+                    <ul>
+                        <li>Leading 20+ students in fellowship programs</li>
+                        <li>Developed Product design curriculum for UCI 1st undergraduate class</li>
+                        <li>Writing club's weekly newsletter with an average open rate of 60-65%</li>
+                    </ul>
+                </section>
+                <section class = "block">
+                    <b> UCI Physics and Astronomy, </b> <i>Machine Learning Researcher</i>
+                    <br><small class = "Addendum">JULY 2020 - Present . Irvine, CA</small></br>
+                    <ul>
+                        <li>Leading 20+ students in fellowship programs</li>
+                        <li>Developed Product design curriculum for UCI 1st undergraduate class</li>
+                        <li>Writing club's weekly newsletter with an average open rate of 60-65%</li>
+                    </ul>
+                </section>
+                <section class = "block">
+                    <b> Shoelace Wireless, </b> <i>Data Analytics Intern</i>
+                    <br><small class = "Addendum">APR 2019 - SEPT 2019 . Irvine, CA</small></br>
+                    <ul>
+                        <li>Leading 20+ students in fellowship programs</li>
+                        <li>Developed Product design curriculum for UCI 1st undergraduate class</li>
+                        <li>Writing club's weekly newsletter with an average open rate of 60-65%</li>
+                    </ul>
+                </section>
+                <section class = "block">
+                    <b> ARTEM(Startup), </b> <i>Founder and CEO</i>
+                    <br><small class = "Addendum">NOV 2017 - DEC 2018 . Irvine, CA</small></br>
+                    <ul>
+                        <li>Leading 20+ students in fellowship programs</li>
+                        <li>Developed Product design curriculum for UCI 1st undergraduate class</li>
+                        <li>Writing club's weekly newsletter with an average open rate of 60-65%</li>
+                    </ul>
+                </section>
+                <div>
+                    <form id = "formfield" >
+                        <h2>Quick Edit Area</h2>
+                        <p><input id = "Cvname" name = "Cvname" placeholder = "Enter a new name"></p>
+                        
+                        <label for = "Experience"> Enter your most recent experience</label>
+                        <input type ="text" id = "Experience" name = "Experience">
+                        <br>
+                        <label for = "newGpa">What is your current Gpa?</label>
+                        <input type ="number" id = "newGpa" name = "newGpa" max = "4.0" min = "1.0" step = "0.5">
+                        <br>
+                        <label for = "Music"> What is your favourite song</label>
+                        <input type = text id = "Music" type = "Music">
+                        <!-- Add radio buttons for user to select whether they like or dislike music and then remove or keep the music section as 
+                        is appropriate. Also if possible, new button should appear when user selects Yes which would allow them to type in a favourite song -->
+                        <br><br>
+                    </form>
+                    <span id = "Result"></span>
+                    <button type = submit id = "Submit">Goooo</button>
+
+                </div>
+            </div>
+            <div class = "column right">
+                <h2 class = "heading"> Education<br></br></h2>
+                <p><b>Ashesi University, Berekuso</b>
+                    <br>Bsc Computer Science
+                    <br>Cumulative GPA: <span id = "Gpa">4.0</span></br>
+                    DEC 2020 - DEC 2024</br>
+                </p>
+                <br></br>
+
+                <h2 class = heading> Awards <br></br></h2>
+                <p> 1st Place Winner of 2022 AI Project Competition
+                    <br>Best Growth Strategy for 2018 ANTrepreneur Awards</br>
+                </p>
+                <br></br>
+
+                <h2 class = heading> Tools & Skills<br></br> </h2>
+                <p><b>Tools</b>: Trello, Substack, Github, Python, Java, SQL, HTML, CSS</p>
+                <p><b>Skills</b>: Programming, Data Analytics, Web Design, Software Development, Public Speaking</p>
+                <br></br>
+
+                <h2 class = heading> Music & Interests<br></br> </h2>
+                <p><b>Music</b>: Favourite = <span id = "Favourite_Song">David Bowie</span><br>The Supremes, Tears for Fears, Marvin Gaye, The Beatles</p>
+                <p><b>Interests</b>: Improv, Skiing, Playing the piano, Skateboarding, Racing, Video Games</p>
+                <br></br>
+
+            </div>
+        </div>
+    <script>
+           
+
+            //Having the submit button in the form tag caused the page to refresh and changes were not reflecting
+            //What is the reason for that
+       
+        const usernameEl = document.getElementById("Username");
+        const experienceEl = document.getElementById("Recent_Experience");
+        const favouriteSongEl = document.getElementById("Favourite_Song");
+        const gpaEl = document.getElementById("Gpa");
+        const submitEl = document.getElementById("Submit");
+
+        submitEl.onclick = function changeInfo(){
+        const newCVName = document.getElementById("Cvname").value;
+        console.log(newCVName);
+        if (newCVName != ""){
+            usernameEl.innerHTML = newCVName;
+        }
+        document.getElementById("Cvname").value = "";
+
+        const newExperience = document.getElementById("Experience").value;
+        if (newExperience != ""){
+            experienceEl.innerHTML = newExperience;
+        }
+        document.getElementById("Experience").value = "";
+
+        const newGpa = document.getElementById("newGpa").value;
+        if (newGpa != ""){
+            gpaEl.innerHTML = newGpa;
+        }
+        document.getElementById("newGpa").value = "";
+
+        const newSong = document.getElementById("Music").value;
+        if (newSong != ""){
+            favouriteSongEl.innerHTML = newSong;
+        }
+        document.getElementById("Music").value = "";
+
+        //Get success message to stay for a few seconds and disappear 
+        document.getElementById("Result").innerHTML = "Success!!";
+        }
+
+
+    </script>
+    </body>
+    <footer><small>By Buntugu Tech - </small>
+        <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"><small>Learn More</small></a> </footer>
+</html>
